@@ -27,4 +27,5 @@ urlpatterns = [
     path("work02/", views.work02),
     path("work03/", views.work03),
     path("chapter03/", include("chapter03.urls")),
+    path("chapter04/", include("chapter04.urls")),
 ]
