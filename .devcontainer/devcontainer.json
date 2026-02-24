@@ -31,6 +31,6 @@
       }
     }
   },
-  "postCreateCommand": "sudo ln -s /usr/bin/pip3 /usr/bin/pip || true && pip install --upgrade pip",
+  "postCreateCommand": "sudo ln -s /usr/bin/pip3 /usr/bin/pip || true && pip install --upgrade pip && pip install 'django==5.2.*'",
   "remoteUser": "vscode"
 }
