@@ -1,0 +1,22 @@
+<html>
+    <body>
+        <h1>{{title}}</h1>
+        <form action="{% url 'chapter05:work07'%}" method="POST">
+            <div>
+                <label for="age">年齢：</label><input type="text" id="age" name="age">
+            </div>
+            <div>
+                {%csrf_token%}
+                <input type="submit" value="送信">
+            </div>
+        </form>
+        <hr>
+        {% if request.method == "POST" %}
+            {% if data.age >= 18 %}
+            <div>選挙権がありますね。投票に行きましょう</div>
+            {% else %}
+            <div>まだ選挙権はありません。投票に行くことはできません</div>
+            {% endif %}
+        {% endif %}
+    </body>
+</html>

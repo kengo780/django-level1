@@ -1,0 +1,20 @@
+<html>
+    <body>
+        <h1>{{title}}</h1>
+        <form action="{% url 'chapter05:work10'%}" method="POST">
+            <div>
+                <label for="music">好きな音楽：</label><input type="text" id="music" name="music">
+            </div>
+            <div>
+                <label for="movie">好きな映画：</label><input type="text" id="movie" name="movie">
+            </div>
+            <div>
+                {%csrf_token%}
+                <input type="submit" value="送信">
+            </div>
+        </form>
+        <hr>
+        <div>好きな音楽：{{data.music}}</div>
+        <div>好きな映画：{{data.movie}}</div>
+    </body>
+</html>

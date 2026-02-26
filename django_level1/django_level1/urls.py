@@ -28,4 +28,6 @@ urlpatterns = [
     path("work03/", views.work03),
     path("chapter03/", include("chapter03.urls")),
     path("chapter04/", include("chapter04.urls")),
+    path("chapter05/", include("chapter05.urls")),
+    path("chapter06/", include("chapter06.urls")),
 ]
