@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.headline {
+    margin: 14px;
+    padding: 14px;
+    font-size: 20px;
+    border-left: 10px solid #9400D3;
+    background-color: #FFBBFF;
+    color: #9400D3;
+}
+.sub_title {
+    margin: 14px;
+    padding: 14px;
+    font-size: 14px;
+    border-top: 2px dashed #EE7600;
+    border-bottom: 2px dashed #EE7600;
+    background: #FFE7BA;
+    color: #EE7600;
+}

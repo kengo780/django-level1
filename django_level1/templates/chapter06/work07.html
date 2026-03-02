@@ -1,0 +1,22 @@
+<html>
+    <body>
+        <h1>{{title}}</h1>
+        <form action="{% url 'chapter06:work07' %}" method="POST">
+            <div>
+                <label for="country">行ってみたい国：</label>
+                <select id="country" name="country">
+                    <option value="USA">アメリカ</option>
+                    <option value="England">イギリス</option>
+                    <option value="France">フランス</option>
+                    <option value="Germany">ドイツ</option>
+                </select>
+            </div>
+            <div>
+                {%csrf_token%}
+                <input type="submit" value="送信">
+            </div>
+        </form>
+        <hr>
+        <div>行ってみたい国：{{ data.country }}</div>
+    </body>
+</html>

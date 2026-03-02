@@ -1,0 +1,32 @@
+<html>
+    <body>
+        <h1>{{title}}</h1>
+        <form action="{% url 'chapter06:work08' %}" method="POST">  
+            <div>
+                好きな料理：
+                <label for="action">
+                    <input type="checkbox" id="sushi" name="food" value="sushi">寿司
+                </label>
+                <label for="sf">
+                    <input type="checkbox" id="steak" name="food" value="steak">ステーキ
+                </label>
+                <label for="comedy">
+                    <input type="checkbox" id="curry" name="food" value="curry">カレー
+                </label>
+                <label for="suspense">
+                    <input type="checkbox" id="pizza" name="food" value="pizza">ピザ
+                </label>
+            </div>
+            <div>
+                {%csrf_token%}
+                <input type="submit" value="送信">
+            </div>
+        </form>
+        <hr>
+        <div>好きな映画：
+        {% for value in data.food %}
+            {{value}},
+        {% endfor %}
+        </div>
+    </body>
+</html>

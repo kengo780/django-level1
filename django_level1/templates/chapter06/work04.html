@@ -1,0 +1,35 @@
+<html>
+    <body>
+        <h1>{{title}}</h1>
+        <!-- 「action」の属性を修正します  -->
+        <form action="{% url 'chapter06:work04' %}" method="POST">  
+            <!--　以下のdivとその中身全体 -->
+            <div>
+                好きな映画：
+                <label for="action">
+                    <input type="checkbox" id="action" name="movie" value="action">アクション
+                </label>
+                <label for="sf">
+                    <input type="checkbox" id="sf" name="movie" value="sf">SF
+                </label>
+                <label for="comedy">
+                    <input type="checkbox" id="comedy" name="movie" value="comedy">コメディ
+                </label>
+                <label for="suspense">
+                    <input type="checkbox" id="suspense" name="movie" value="suspense">サスペンス
+                </label>
+            </div>
+            <div>
+                {%csrf_token%}
+                <input type="submit" value="送信">
+            </div>
+        </form>
+        <hr>
+        <!-- 以下のdivと中身全体 -->
+        <div>好きな映画：
+        {% for value in data.movie %}
+            {{value}},
+        {% endfor %}
+        </div>
+    </body>
+</html>

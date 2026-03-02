@@ -30,28 +30,28 @@ def work04(request):
 
 def work05(request):
     message="""
-<html>
-    <body>
-        <h1>生徒一覧</h1>
-            <ul>
-                <li>ジョン</li>
-                <li>ナンシー</li>
-                <li>ボブ</li>
-            </ul>
-    </body>
-</html>"""
+    <html>
+        <body>
+            <h1>生徒一覧</h1>
+                <ul>
+                    <li>ジョン</li>
+                    <li>ナンシー</li>
+                    <li>ボブ</li>
+                </ul>
+        </body>
+    </html>"""
     return HttpResponse(message)
 
 
 def work06(request):
     message="""
-<html>
-    <body>
-        <h2>今日の天気</h2>
-        <h2>晴れのち曇り</h2>
-        <h2>最高気温：30度</h2>P
-        <h2>最低気温：21度</h2>
-    </body>
-</html>
-"""
+    <html>
+        <body>
+            <h1>今日の天気</h1>
+            <h2>晴れのち曇り</h2>
+            <h2>最高気温：30度</h2>
+            <h2>最低気温：21度</h2>
+        </body>
+    </html>
+    """
     return HttpResponse(message)

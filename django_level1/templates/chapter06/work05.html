@@ -1,0 +1,19 @@
+<html>
+    <body>
+        <h1>{{title}}</h1>
+        <form action="{% url 'chapter06:work05' %}" method="POST">
+            <div>
+                メッセージ：
+            </div>
+            <div>
+                <textarea name="message" cols="50" rows="10"></textarea>
+            </div>
+            <div>
+                {%csrf_token%}
+                <input type="submit" value="送信">
+            </div>
+        </form>
+        <hr>
+        <div>メッセージ：{{data.message}}</div>
+    </body>
+</html>
