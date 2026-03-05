@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title%}{{title}}{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h2 class="m-2 mb-4 p-2 bg-primary text-white">{{title}}</h2>
+    <form action="{% url 'chapter08:work04' %}" method="POST" novalidate>
+        {{form.as_p}}
+        {% csrf_token %}
+        <button type="submit" class="my-2 btn btn-primary">送信</button>
+    </form>
+    <hr>
+    <div>名前：{{ form.name.value }}</div>
+    <div>好きな音楽：{{ form.music.value }}</div>
+</div>
+{% endblock %}

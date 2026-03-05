@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h2 class="m-2 mb-4 p-2 bg-primary text-white">{{ title }}</h2>
+    <h3 class="m-2 mb-4 p-2 bg-secondary text-white">{{ sub_title }}</h3>
+    <div class="m-2">
+        <table class="table table-bordered">
+            <tr><th>名前</th><td>{{ form.name.value }}</td></tr>
+            <tr><th>学年</th><td>{{ form.grade.value }}</td></tr>
+            <tr><th>勉強してみたい言語</th><td>{{ form.language.value }}</td></tr>
+            <tr><th>行きたい街</th><td>{{ form.country.value }}</td></tr>
+        </table>
+        <a href="{% url 'chapter11:work01' %}" class="btn btn-primary">戻る</a>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title%}{{title}}{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h2 class="m-2 mb-4 p-2 bg-primary text-white">{{title}}</h2>
+    <form action="{% url 'chapter08:work02' %}" method="POST" novalidate>
+        {{form.as_p}}
+        {% csrf_token %}
+        <button type="submit" class="my-2 btn btn-primary">送信</button>
+    </form>
+    <hr>
+    <div>名前：{{ form.name.value }}</div>
+    <div>メール：{{ form.mail.value }}</div>
+    <div>年齢：{{ form.age.value }}</div>
+</div>
+{% endblock %}
